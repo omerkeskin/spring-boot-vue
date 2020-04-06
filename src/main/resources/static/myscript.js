@@ -1,7 +1,14 @@
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue!'
+        message: 'Hello Vue!',
+        x :0,
+        y :0
+    },
+    methods: {
+        showAlert: function () {
+            console.log('Vue showAlert function')
+        }
     }
 });
 
