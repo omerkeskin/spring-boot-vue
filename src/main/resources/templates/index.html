@@ -12,12 +12,13 @@
     <p>{{ message }}</p>
 
     <button id="btn_mycustom"  onclick="alert('Hello dunya!')">Click Me!</button>
-    <button id="btn_vueexample"  v-on:click="showAlert">Vue Click</button>
-    <p>deneme Coordinates : x={{ x }}, y={{ y }}</p>
+    <button id="btn_vueexample"  v-on:click="showAlert($event, 'Omer')">Vue Click</button>
+    <p id="p_mycustom" v-on:mousemove="updateCoords">Coordinates : x={{ x }}, y={{ y }}</p>
+
 </div>
 
 
-<script src="myscript.js"></script>
+<script src="script.js"></script>
 
 
 </body>
