@@ -13,7 +13,19 @@
 
     <button id="btn_mycustom"  onclick="alert('Hello dunya!')">Click Me!</button>
     <button id="btn_vueexample"  v-on:click="showAlert($event, 'Omer')">Vue Click</button>
-    <p id="p_mycustom" v-on:mousemove="updateCoords">Coordinates : x={{ x }}, y={{ y }}</p>
+    <p id="p_mycustom" v-on:mousemove="updateCoords">
+         Coordinates : x={{ x }}, y={{ y }}
+         <span v-on:mousemove.stop>GIZLI BOLME</span>
+    </p>
+
+    <input type="text" id="txt_mycustom" v-on:keyup.enter.space="onTxtMyCustomKeyUp" placeholder="Buraya bişey yaz" />
+    <p>----------------------------------------------------------</p>
+    <input type="text"  placeholder="Two way" v-model="message"/>
+    <p></p>
+    <button v-on:click="counter++">Artır</button>
+    <button v-on:click="counter--">Azalt</button>
+    <p>Counter : {{ counter }}</p>
+    <p>{{ firstCounterResult }}</p>
 
 </div>
 
